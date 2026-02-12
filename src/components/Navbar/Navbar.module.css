@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: 0.6rem 0;
+}
+
+.nav .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  height: 48px;
+}
+
+.nav .menus {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.nav .actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.nav .menus .item {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-style: normal;
+}
+
+.nav .inner .text {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: uppercase;
+}
