@@ -3,8 +3,6 @@ import styles from "./CartPage.module.css";
 import BreadCrumbs from "../../components/common/BreadCrumbs";
 import CartItem from "../../components/cart/CartItem";
 
-import SubscribeSection from "../../components/SubscribeSection";
-
 import { ReactComponent as RightArrowIcon } from "../../assets/icons/right_arrow.svg";
 
 const CART_ITEMS = [
@@ -108,8 +106,6 @@ export default function CartPage() {
           </div>
         </section>
       </div>
-
-      <SubscribeSection />
     </div>
   );
 }
