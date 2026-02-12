@@ -1,8 +1,12 @@
 .icon-button {
+  background-color: white;
   border: none;
   transition: 0.3s;
+  padding: 0.4rem 0.6rem;
 }
 
 .icon-button:hover {
   background-color: var(--tertiary-color);
+  border-radius: 20px;
+  cursor: pointer;
 }
