@@ -1,11 +1,12 @@
 import Hero from "../components/home/Hero";
-import NewArrivals from "../components/home/NewArrivals";
+import ShowProducts from "../components/common/ShowProducts";
 
 export default function HomePage() {
   return (
     <div>
       <Hero />
-      <NewArrivals />
+      <ShowProducts title={"NEW ARRIVALS"} />
+      <ShowProducts title={"top selling"} />
     </div>
   );
 }

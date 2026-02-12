@@ -1,12 +1,12 @@
-import styles from "./NewArrivals.module.css";
+import styles from "./ShowProducts.module.css";
 
-import ProductCard from "../../common/ProductCard";
+import ProductCard from "../ProductCard";
 
-export default function NewArrivals() {
+export default function ShowProducts({ title }) {
   return (
     <section>
       <div>
-        <h2>NEW ARRIVALS</h2>
+        <h2>{title}</h2>
 
         <div>
           <ProductCard
