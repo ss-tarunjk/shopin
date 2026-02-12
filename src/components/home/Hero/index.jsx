@@ -45,14 +45,13 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="">
+      <div className={styles["bg-black"]}>
         {BRAND_IMAGES.map((item, i) => (
           <img
             key={i}
             src={`/images/hero/${item}`}
             alt="Hero Image"
             width={100}
-            height={100}
           />
         ))}
       </div>
