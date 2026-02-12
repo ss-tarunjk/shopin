@@ -5,6 +5,8 @@ import CartItem from "../../components/cart/CartItem";
 
 import SubscribeSection from "../../components/SubscribeSection";
 
+import { ReactComponent as RightArrowIcon } from "../../assets/icons/right_arrow.svg";
+
 const CART_ITEMS = [
   {
     name: "Gradient Graphic T-shirt",
@@ -34,7 +36,7 @@ export default function CartPage() {
     <div>
       <BreadCrumbs />
 
-      <h2 className="header-text">Your Cart</h2>
+      <h2 className={`${styles["cart-header-text"]} header-text`}>Your Cart</h2>
 
       <div className={styles["cart-group"]}>
         <section className={styles["cart-items-section"]}>
@@ -51,7 +53,60 @@ export default function CartPage() {
           })}
         </section>
 
-        <section className={styles["cart-summary-section"]}>s</section>
+        <section className={styles["cart-summary-section"]}>
+          <h3 className={styles["cart-summary-text"]}>Order Summary</h3>
+
+          <div className={styles["cart-summary-labels"]}>
+            <div className={styles["cart-summary-row"]}>
+              <h4 className={styles["cart-summary-row-label"]}>Subtotal</h4>
+              <span className={styles["cart-summary-row-value"]}>$565</span>
+            </div>
+
+            <div className={styles["cart-summary-row"]}>
+              <h4 className={styles["cart-summary-row-label"]}>
+                Discount (-20%)
+              </h4>
+              <span className={styles["cart-summary-row-value-discount"]}>
+                -$113
+              </span>
+            </div>
+
+            <div className={styles["cart-summary-row"]}>
+              <h4 className={styles["cart-summary-row-label"]}>Delivery Fee</h4>
+              <span className={styles["cart-summary-row-value"]}>$15</span>
+            </div>
+
+            <hr className={styles["line"]} />
+
+            <div className={styles["cart-summary-row"]}>
+              <h4 className={styles["cart-summary-total-label"]}>Total</h4>
+              <span className={styles["cart-summary-total-value"]}>$467</span>
+            </div>
+          </div>
+
+          <div className={styles["cart-promo"]}>
+            <input
+              type="text"
+              name="promo_code"
+              id="promo_code"
+              placeholder="Add promo code"
+              className={styles["cart-promo-text-field"]}
+            />
+
+            <button className={styles["cart-promo-button"]} type="button">
+              Apply
+            </button>
+          </div>
+
+          <div>
+            <button className={styles["cart-checkout-button"]} type="button">
+              <span className={styles["cart-checkout-text"]}>
+                Go to Checkout
+              </span>{" "}
+              <RightArrowIcon />
+            </button>
+          </div>
+        </section>
       </div>
 
       <SubscribeSection />

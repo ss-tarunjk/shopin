@@ -1,7 +1,12 @@
 .cart-group {
+  margin-top: 10px;
   display: flex;
   gap: 20px;
   align-items: start;
+}
+
+.cart-header-text {
+  margin-top: 10px;
 }
 
 .cart-summary-section {
@@ -26,4 +31,112 @@
 
 .line {
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary-text {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cart-summary-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-summary-row-label {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cart-summary-row-value {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.cart-summary-row-value-discount {
+  font-weight: 400;
+  font-size: 20px;
+  color: red;
+}
+
+.cart-summary-total-label {
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+.cart-summary-total-value {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cart-promo {
+  display: flex;
+  gap: 12px;
+}
+
+.cart-promo-text-field {
+  width: 75%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 62px;
+  border: none;
+  background-color: var(--tertiary-color);
+}
+
+.cart-promo-text-field:focus {
+  outline: none;
+}
+
+.cart-promo-button {
+  width: 25%;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 62px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cart-checkout-button {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 62px;
+  padding: 16px 54px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cart-promo-button:hover,
+.cart-checkout-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.cart-checkout-text {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 16px;
 }
