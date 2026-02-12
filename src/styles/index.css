@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* For Testing Purpose  */
+  font-family: "Satoshi", sans-serif;
 }
 
 .header-text {

@@ -1,32 +1,49 @@
-import { useState } from "react";
-
 import IconButton from "../../common/IconButton/IconButton";
+
 import { ReactComponent as BinIcon } from "../../../assets/icons/bin.svg";
+import { ReactComponent as MinusIcon } from "../../../assets/icons/minus.svg";
+import { ReactComponent as PlusIcon } from "../../../assets/icons/plus.svg";
+
+import styles from "./CartItem.module.css";
 
 export default function CartItem() {
-  const [count, setCount] = useState(1);
-
   return (
-    <article>
-      <div className="flex">
-        <img src="/images/products/product1.png" alt="Image" />
-        <div>
-          <h3>GG</h3>
-          <p>Size: Large</p>
-          <p>Color: White</p>
+    <article className={styles["cart-item"]}>
+      <img
+        className={styles["cart-image"]}
+        src="/images/products/product1.png"
+        alt="Image"
+      />
 
-          <h2>$180</h2>
+      <div className={styles["cart-data"]}>
+        <div>
+          <h4 className={styles["cart-name"]}>Gradient Graphic T-shirt</h4>
+          <p className={styles["cart-label"]}>
+            Size: <span>Large</span>
+          </p>
+          <p className={styles["cart-label"]}>
+            Color: <span>White</span>
+          </p>
         </div>
+
+        <h2 className={styles["cart-price"]}>$180</h2>
       </div>
-      <div>
+
+      <div className={styles["cart-action"]}>
         <IconButton
           title="Remove"
           icon={<BinIcon width={18} height={19.5} />}
           onClick={() => {}}
         />
 
-        <div>
-          <button>-</button> 1 <button>+</button>
+        <div className={styles["cart-action-buttons"]}>
+          <button className={styles["cart-action-button-left"]} type="button">
+            <MinusIcon />
+          </button>
+          <span className={styles["cart-action-value"]}>1</span>
+          <button className={styles["cart-action-button-right"]} type="button">
+            <PlusIcon />
+          </button>
         </div>
       </div>
     </article>
