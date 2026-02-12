@@ -12,6 +12,8 @@ import { ReactComponent as InstagramIcon } from "../../assets/icons/insta.svg";
 import { ReactComponent as TwitterIcon } from "../../assets/icons/twitter.svg";
 import { ReactComponent as GithubIcon } from "../../assets/icons/github.svg";
 
+import { ReactComponent as MailIcon } from "../../assets/icons/mail.svg";
+
 const FOOTER_BOTTOM_ICONS = [
   { icon: <TwitterIcon />, href: "#" },
   { icon: <FacebookIcon />, href: "#", isBlack: true },
@@ -31,13 +33,17 @@ export default function Footer() {
             </h2>
 
             <div className={styles["footer-subscribe-action"]}>
-              <input
-                type="text"
-                name="promo_code"
-                id="promo_code"
-                placeholder="Enter your email address"
-                className={styles["footer-subscribe-action-text-field"]}
-              />
+              <div className={styles["input-wrapper"]}>
+                <MailIcon />
+
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                  className={styles["footer-subscribe-action-text-field"]}
+                />
+              </div>
 
               <button
                 className={styles["footer-subscribe-action-button"]}

@@ -5,6 +5,8 @@ import CartItem from "../../components/cart/CartItem";
 
 import { ReactComponent as RightArrowIcon } from "../../assets/icons/right_arrow.svg";
 
+import { ReactComponent as TagIcon } from "../../assets/icons/tag.svg";
+
 const CART_ITEMS = [
   {
     name: "Gradient Graphic T-shirt",
@@ -83,13 +85,17 @@ export default function CartPage() {
           </div>
 
           <div className={styles["cart-promo"]}>
-            <input
-              type="text"
-              name="promo_code"
-              id="promo_code"
-              placeholder="Add promo code"
-              className={styles["cart-promo-text-field"]}
-            />
+            <div className={styles["input-wrapper"]}>
+              <TagIcon />
+
+              <input
+                type="text"
+                name="promo_code"
+                id="promo_code"
+                placeholder="Add promo code"
+                className={styles["cart-promo-text-field"]}
+              />
+            </div>
 
             <button className={styles["cart-promo-button"]} type="button">
               Apply

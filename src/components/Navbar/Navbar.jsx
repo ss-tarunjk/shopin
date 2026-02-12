@@ -4,11 +4,12 @@ import styles from "./Navbar.module.css";
 
 import appConfig from "../config/app.config";
 
-import SearchBar from "./SearchBar";
 import IconButton from "../common/IconButton/IconButton";
 
 import { ReactComponent as CartIcon } from "../../assets/icons/cart.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/icons/profile.svg";
+
+import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 
 export default function Navbar() {
   return (
@@ -32,7 +33,17 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <SearchBar />
+        <div className={styles["input-wrapper"]}>
+          <SearchIcon />
+
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search for products..."
+            className={styles["search-text-field"]}
+          />
+        </div>
 
         <div className={styles.actions}>
           <IconButton
