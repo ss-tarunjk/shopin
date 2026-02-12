@@ -63,10 +63,12 @@
 .cart-action-button-left,
 .cart-action-button-right {
   border: none;
+  transition: 0.3s;
 }
 
 .cart-action-button-left:hover,
 .cart-action-button-right:hover {
+  rotate: 360deg;
   cursor: pointer;
 }
 
