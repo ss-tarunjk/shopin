@@ -1,0 +1,23 @@
+.header-text {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}

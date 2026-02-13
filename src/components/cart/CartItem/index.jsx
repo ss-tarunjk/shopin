@@ -1,4 +1,4 @@
-import IconButton from "../../common/IconButton/IconButton";
+import IconButton from "../../common/IconButton";
 
 import { ReactComponent as BinIcon } from "../../../assets/icons/bin.svg";
 import { ReactComponent as MinusIcon } from "../../../assets/icons/minus.svg";

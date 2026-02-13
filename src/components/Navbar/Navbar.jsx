@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 
 import appConfig from "../config/app.config";
 
-import IconButton from "../common/IconButton/IconButton";
+import IconButton from "../common/IconButton";
 
 import { ReactComponent as CartIcon } from "../../assets/icons/cart.svg";
 import { ReactComponent as ProfileIcon } from "../../assets/icons/profile.svg";
