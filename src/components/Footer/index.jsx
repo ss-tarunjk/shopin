@@ -21,13 +21,21 @@ const FOOTER_BOTTOM_ICONS = [
   { icon: <GithubIcon />, href: "#" },
 ];
 
+const FOOTER_BOTTOM_PAYMENT_ICONS = [
+  { src: "/images/footer/visa.png", alt: "Visa" },
+  { src: "/images/footer/master.png", alt: "Mastercard" },
+  { src: "/images/footer/paypal.png", alt: "PayPal" },
+  { src: "/images/footer/applepay.png", alt: "Apple Pay" },
+  { src: "/images/footer/gpay.png", alt: "Google Pay" },
+];
+
 export default function Footer() {
   return (
     <footer className={styles["footer"]}>
       {/* Subscribe section */}
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div style={{ width: "90%" }}>
-          <div className={styles["footer-subscribe"]}>
+        <div style={{ width: "90%" }} className="relative">
+          <div className={`${styles["footer-subscribe"]}`}>
             <h2 className={styles["footer-subscribe-text"]}>
               STAY UPTO DATE ABOUT OUR LATEST OFFERS
             </h2>
@@ -53,6 +61,7 @@ export default function Footer() {
               </button>
             </div>
           </div>
+
           {/* Main Footer section */}
           <div className={`${styles["footer-main"]}`}>
             <div className={`flex justify-between`}>
@@ -107,25 +116,11 @@ export default function Footer() {
               </p>
 
               <div className={styles["footer-bottom-icons"]}>
-                <div className={styles["footer-bottom-icon"]}>
-                  <img src="/images/footer/visa.png" alt="Visa" />
-                </div>
-
-                <div className={styles["footer-bottom-icon"]}>
-                  <img src="/images/footer/master.png" alt="Mastercard" />
-                </div>
-
-                <div className={styles["footer-bottom-icon"]}>
-                  <img src="/images/footer/paypal.png" alt="Paypal" />
-                </div>
-
-                <div className={styles["footer-bottom-icon"]}>
-                  <img src="/images/footer/applepay.png" alt="Apple Pay" />
-                </div>
-
-                <div className={styles["footer-bottom-icon"]}>
-                  <img src="/images/footer/gpay.png" alt="Google Pay" />
-                </div>
+                {FOOTER_BOTTOM_PAYMENT_ICONS.map((item, i) => (
+                  <div className={styles["footer-bottom-icon"]} key={i}>
+                    <img src={item.src} alt={item.alt} x />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
