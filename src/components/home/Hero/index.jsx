@@ -1,5 +1,7 @@
 import styles from "./Hero.module.css";
 
+import { ReactComponent as StarIcon } from "../../../assets/icons/star.svg";
+
 const HERO_STATS = [
   {
     id: 1,
@@ -66,12 +68,16 @@ export default function Hero() {
         </div>
 
         <div className={styles["hero-image-container"]}>
-          <img
-            src="/images/hero/hero.jpg"
-            alt="Hero Image"
-            width={100}
-            height={100}
-          />
+          <div className={styles["hero-image-container-image"]}>
+            <img
+              src="/images/hero/hero.jpg"
+              alt="Hero Image"
+              className={styles["hero-image"]}
+            />
+            <StarIcon className={styles["hero-star-icon1"]} width={56} />
+
+            <StarIcon className={styles["hero-star-icon2"]} width={104} />
+          </div>
         </div>
       </div>
 
