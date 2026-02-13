@@ -5,6 +5,8 @@ import BreadCrumbs from "../../components/common/BreadCrumbs";
 import ReviewCard from "../../components/common/ReviewCard";
 
 import PRODUCTS from "./data.json";
+
+import { ReactComponent as DownTagIcon } from "../../assets/icons/downtag.svg";
 import { ReactComponent as FilterIcon } from "../../assets/icons/filter.svg";
 
 const REVIEWS = [
@@ -101,14 +103,14 @@ export default function ProductPage() {
               type="button"
               className={styles["product-reviews-filter-button-menu"]}
             >
-              <FilterIcon />
+              <FilterIcon width={20} height={20} />
             </button>
 
             <button
               type="button"
               className={styles["product-reviews-filter-button-latest"]}
             >
-              Latest
+              Latest <DownTagIcon width={12} />
             </button>
 
             <button
