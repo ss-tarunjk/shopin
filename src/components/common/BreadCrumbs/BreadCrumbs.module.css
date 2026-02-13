@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumbs-item {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.breadcrumbs-item-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.breadcrumbs-item-active {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.breadcrumbs-item:hover,
+.breadcrumbs-item-active:hover {
+  color: rgba(0, 0, 0, 0.9);
+}

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 
@@ -12,10 +12,14 @@ import { ReactComponent as ProfileIcon } from "../../assets/icons/profile.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   return (
     <nav className={styles.nav}>
       <div className={styles.inner}>
-        <h2 className={styles.text}>{appConfig.appName}</h2>
+        <Link style={{ textDecoration: "none" }} to={"/"}>
+          <h2 className={styles.text}>{appConfig.appName}</h2>
+        </Link>
 
         {/* Menus */}
         <div className={styles.menus}>
@@ -49,7 +53,7 @@ export default function Navbar() {
           <IconButton
             title="Cart"
             icon={<CartIcon width={24} height={24} />}
-            onClick={() => {}}
+            onClick={() => navigate("/products/cart")}
           />
 
           <IconButton

@@ -7,7 +7,12 @@ export default function IconButton({
   onClick = () => {},
 }) {
   return (
-    <button className={styles["icon-button"]} type={type} title={title}>
+    <button
+      className={styles["icon-button"]}
+      type={type}
+      title={title}
+      onClick={onClick}
+    >
       {icon}
     </button>
   );

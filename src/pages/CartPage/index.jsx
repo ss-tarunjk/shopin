@@ -7,34 +7,17 @@ import { ReactComponent as RightArrowIcon } from "../../assets/icons/right_arrow
 
 import { ReactComponent as TagIcon } from "../../assets/icons/tag.svg";
 
-const CART_ITEMS = [
-  {
-    name: "Gradient Graphic T-shirt",
-    size: "Large",
-    color: "White",
-    price: 145,
-    image: "/images/products/product1.png",
-  },
-  {
-    name: "Gradient Graphic T-shirt",
-    size: "Large",
-    color: "White",
-    price: 145,
-    image: "/images/products/product1.png",
-  },
-  {
-    name: "Gradient Graphic T-shirt",
-    size: "Large",
-    color: "White",
-    price: 145,
-    image: "/images/products/product1.png",
-  },
-];
+import CART_ITEMS from "./data.json";
 
 export default function CartPage() {
   return (
     <div>
-      <BreadCrumbs />
+      <BreadCrumbs
+        routes={[
+          { name: "Home", path: "/" },
+          { name: "Cart", path: "/products/cart" },
+        ]}
+      />
 
       <h2 className={`${styles["cart-header-text"]} header-text`}>Your Cart</h2>
 
@@ -44,7 +27,7 @@ export default function CartPage() {
             const id = `${item.name.toLowerCase()}-${item.size.toLowerCase()}-${item.color.toLowerCase()}`;
             return (
               <>
-                <CartItem key={id} />
+                <CartItem key={id} {...item} />
                 {i !== CART_ITEMS.length - 1 && (
                   <hr className={styles["line"]} />
                 )}

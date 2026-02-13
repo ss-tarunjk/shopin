@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Gradient Graphic T-shirt",
+    "size": "Large",
+    "color": "White",
+    "price": 145,
+    "image": "/images/products/product1.png"
+  },
+  {
+    "name": "Gradient Graphic T-shirt",
+    "size": "Large",
+    "color": "White",
+    "price": 145,
+    "image": "/images/products/product2.png"
+  },
+  {
+    "name": "Gradient Graphic T-shirt",
+    "size": "Large",
+    "color": "White",
+    "price": 145,
+    "image": "/images/products/product3.png"
+  }
+]

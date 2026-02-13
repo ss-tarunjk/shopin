@@ -6,27 +6,23 @@ import { ReactComponent as PlusIcon } from "../../../assets/icons/plus.svg";
 
 import styles from "./CartItem.module.css";
 
-export default function CartItem() {
+export default function CartItem({ name, size, color, price, image }) {
   return (
     <article className={styles["cart-item"]}>
-      <img
-        className={styles["cart-image"]}
-        src="/images/products/product1.png"
-        alt="Image"
-      />
+      <img className={styles["cart-image"]} src={image} alt={name} />
 
       <div className={styles["cart-data"]}>
         <div>
-          <h4 className={styles["cart-name"]}>Gradient Graphic T-shirt</h4>
+          <h4 className={styles["cart-name"]}>{name}</h4>
           <p className={styles["cart-label"]}>
-            Size: <span>Large</span>
+            Size: <span>{size}</span>
           </p>
           <p className={styles["cart-label"]}>
-            Color: <span>White</span>
+            Color: <span>{color}</span>
           </p>
         </div>
 
-        <h2 className={styles["cart-price"]}>$180</h2>
+        <h2 className={styles["cart-price"]}>${price}</h2>
       </div>
 
       <div className={styles["cart-action"]}>
