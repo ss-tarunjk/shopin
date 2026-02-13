@@ -15,54 +15,58 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className={styles.nav}>
-      <div className={styles.inner}>
-        <Link style={{ textDecoration: "none" }} to={"/"}>
-          <h2 className={styles.text}>{appConfig.appName}</h2>
-        </Link>
-
-        {/* Menus */}
-        <div className={styles.menus}>
-          <Link className={styles.item} to={"/"}>
-            Shop
+    <nav className={styles.container}>
+      <div className={styles.nav}>
+        <div className={styles.inner}>
+          <Link style={{ textDecoration: "none" }} to={"/"}>
+            <h2 className={styles.text}>{appConfig.appName}</h2>
           </Link>
-          <Link className={styles.item} to={"/"}>
-            On Sale
-          </Link>
-          <Link className={styles.item} to={"/"}>
-            New Arrivals
-          </Link>
-          <Link className={styles.item} to={"/"}>
-            Brands
-          </Link>
-        </div>
 
-        <div className={styles["input-wrapper"]}>
-          <SearchIcon />
+          {/* Menus */}
+          <div className={styles.menus}>
+            <Link className={styles.item} to={"/"}>
+              Shop
+            </Link>
+            <Link className={styles.item} to={"/"}>
+              On Sale
+            </Link>
+            <Link className={styles.item} to={"/"}>
+              New Arrivals
+            </Link>
+            <Link className={styles.item} to={"/"}>
+              Brands
+            </Link>
+          </div>
 
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search for products..."
-            className={styles["search-text-field"]}
-          />
-        </div>
+          <div className={styles["input-wrapper"]}>
+            <SearchIcon />
 
-        <div className={styles.actions}>
-          <IconButton
-            title="Cart"
-            icon={<CartIcon width={24} height={24} />}
-            onClick={() => navigate("/products/cart")}
-          />
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search for products..."
+              className={styles["search-text-field"]}
+            />
+          </div>
 
-          <IconButton
-            title="Profile"
-            icon={<ProfileIcon width={24} height={24} />}
-            onClick={() => {}}
-          />
+          <div className={styles.actions}>
+            <IconButton
+              title="Cart"
+              icon={<CartIcon width={24} height={24} />}
+              onClick={() => navigate("/products/cart")}
+            />
+
+            <IconButton
+              title="Profile"
+              icon={<ProfileIcon width={24} height={24} />}
+              onClick={() => {}}
+            />
+          </div>
         </div>
       </div>
+
+      <hr className={styles.line} />
     </nav>
   );
 }
