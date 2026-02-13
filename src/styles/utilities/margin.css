@@ -264,3 +264,8 @@
   margin-top: var(--space-16);
   margin-bottom: var(--space-16);
 }
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
