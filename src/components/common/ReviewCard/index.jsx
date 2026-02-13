@@ -33,7 +33,7 @@ export default function ReviewCard({
         {isDetailed && (
           <div>
             <IconButton
-              title="Next"
+              title="More Options"
               icon={<MenuIcon width={15.76} height={18.75} />}
             />
           </div>
@@ -50,7 +50,7 @@ export default function ReviewCard({
 
       {isDetailed && (
         <p className={styles["review-card-date"]}>
-          Posted on {moment(date).format("DD/MM/YYYY")}
+          Posted on {moment(date).format("MMMM D, YYYY")}
         </p>
       )}
     </article>

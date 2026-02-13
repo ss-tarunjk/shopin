@@ -12,7 +12,25 @@ const REVIEWS = [
     id: 1,
     star: 5,
     name: "John Doe",
-    description: "This is a review",
+    description:
+      "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+    date: "2026-01-01",
+  },
+  {
+    id: 2,
+    star: 4,
+    name: "John Doe",
+    description:
+      "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+    date: "2026-01-01",
+  },
+  {
+    id: 3,
+    star: 3,
+    name: "John Doe",
+    description:
+      "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+    date: "2026-01-01",
   },
 ];
 
@@ -34,24 +52,9 @@ export default function OurHappyCustomers() {
       </div>
 
       <div className={styles["reviews-container"]}>
-        <ReviewCard
-          star={5}
-          name="John Doe."
-          description="I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
-          date="2026-01-01"
-        />
-        <ReviewCard
-          star={4}
-          name="John Doe."
-          description="I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
-          date="2026-01-01"
-        />
-        <ReviewCard
-          star={3}
-          name="John Doe."
-          description="I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
-          date="2026-01-01"
-        />
+        {REVIEWS.map((review) => (
+          <ReviewCard key={review.id} {...review} />
+        ))}
       </div>
     </section>
   );
