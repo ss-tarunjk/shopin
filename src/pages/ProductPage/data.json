@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "star": 4.5,
+    "price": 100,
+    "name": "Test",
+    "images": ["/images/products/product1.png"]
+  },
+  {
+    "id": 2,
+    "star": 4,
+    "price": 100,
+    "name": "Test",
+    "images": ["/images/products/product2.png"]
+  },
+  {
+    "id": 3,
+    "star": 4,
+    "price": 180,
+    "name": "Test",
+    "images": ["/images/products/product3.png"]
+  },
+  {
+    "id": 4,
+    "star": 5,
+    "price": 100,
+    "name": "Test",
+    "discountPercentage": 10,
+    "images": ["/images/products/product4.png"]
+  }
+]
