@@ -35,12 +35,13 @@ export default function ProductCard({
         </div>
 
         <div className={styles["product-price-discount-container"]}>
-          <h4 className={styles["product-price"]}>${price}</h4>
+          <h4 className={styles["product-price"]}>
+            {" "}
+            ${price - (price * discountPercentage) / 100}
+          </h4>
 
           {discountPercentage && (
-            <span className={styles["product-price-discount"]}>
-              ${price - (price * discountPercentage) / 100}
-            </span>
+            <span className={styles["product-price-discount"]}>${price}</span>
           )}
 
           {discountPercentage && (
