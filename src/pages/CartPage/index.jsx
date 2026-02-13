@@ -28,9 +28,7 @@ export default function CartPage() {
             return (
               <>
                 <CartItem key={id} {...item} />
-                {i !== CART_ITEMS.length - 1 && (
-                  <hr className={styles["line"]} />
-                )}
+                {i !== CART_ITEMS.length - 1 && <hr className={"hr-line"} />}
               </>
             );
           })}
@@ -59,7 +57,7 @@ export default function CartPage() {
               <span className={styles["cart-summary-row-value"]}>$15</span>
             </div>
 
-            <hr className={styles["line"]} />
+            <hr className={"hr-line"} />
 
             <div className={styles["cart-summary-row"]}>
               <h4 className={styles["cart-summary-total-label"]}>Total</h4>

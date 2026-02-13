@@ -66,7 +66,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <hr className={styles.line} />
+      <hr className={"hr-line"} />
     </nav>
   );
 }

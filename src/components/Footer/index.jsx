@@ -108,7 +108,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <hr className={styles["line"]} />
+            <hr className={"hr-line"} style={{ margin: "60px 0 30px 0" }} />
 
             <div className={styles["footer-bottom"]}>
               <p className={styles["footer-bottom-text"]}>
