@@ -2,20 +2,22 @@ import styles from "./Hero.module.css";
 
 import { ReactComponent as StarIcon } from "../../../assets/icons/star.svg";
 
+import NumberAnimation from "../../animations/NumberAnimation";
+
 const HERO_STATS = [
   {
     id: 1,
-    value: "200+",
+    value: 200,
     description: "International Brands",
   },
   {
     id: 2,
-    value: "2000+",
+    value: 2000,
     description: "High-Quality Products",
   },
   {
     id: 3,
-    value: "30000+",
+    value: 30000,
     description: "Happy Customers",
   },
 ];
@@ -52,7 +54,7 @@ export default function Hero() {
               <>
                 <div className={styles["hero-stats-item"]}>
                   <h3 className={styles["hero-stats-item-value"]}>
-                    {item.value}
+                    <NumberAnimation target={item.value} duration={500} />+
                   </h3>
                   <p className={styles["hero-stats-item-description"]}>
                     {item.description}
